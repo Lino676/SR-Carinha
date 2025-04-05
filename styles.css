@@ -1,0 +1,180 @@
+body {
+    background: linear-gradient(-46deg, black, gray, black, gray, black, gray,black, gray, black);
+    background-size: 2000px 2000px;
+    animation: gradient 15s ease infinite;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.box {
+    background: linear-gradient(-46deg, black, gray, black, gray, black, gray,black, gray, black);
+    background-size: 2000px 2000px;
+    animation: gradient 20s ease infinite, float 4s ease-in-out infinite;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-style: groove;
+    border-color: white;
+    border-radius: 10px;
+    margin: 250px auto;
+    padding: 30px;
+    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.3); 
+    position: relative;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+}
+@keyframes float {
+    0% {transform: translateY(100px);}
+    50% {transform: translateY(-100px);}
+    100% {transform: translateY(100px);}
+}
+.invisivel {
+    opacity: 0;
+    pointer-events: none; 
+    position: fixed;
+    margin-left: 40%;
+
+}
+.visivel {
+    opacity: 1;
+    pointer-events: 1;
+    position: fixed;
+    margin-left: 40%;
+}
+.eyebrow {
+    background-color: white;
+    width: 90px;
+    height: 10px;
+    position: absolute;
+    border-radius: 20px;
+}
+.mano .eyebrow.left {
+    top: 60px;
+    left: 30px;
+    transform: rotate(10deg) skewX(-30deg);
+}
+.mano .eyebrow.right {
+    right: 30px;
+    top: 67px;
+    transform: rotate(-20deg) skewX(-30deg);
+    transform-origin: left center;
+}
+.mano .eyebrow.right::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 9px;
+    background-color: white;
+    border-radius: 50px;
+    bottom: -11px;
+    right: -35px;
+    transform: rotate(40deg);
+
+}
+.eye {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+}
+.mano .eye.left {
+    top: 90px;
+    left: 50px;
+}
+.mano .eye.right {
+    top: 90px;
+    right: 50px;
+}
+.mano .mouth {
+    background-color: white;
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+.feliz .eyebrow.left {
+    top: 50px;
+    left: 30px;
+    transform: rotate(-25deg) skewX(25deg);
+    border-radius: 50px;
+    width: 60px;
+    height: 8px;
+}  
+.feliz .eyebrow.right {
+    top:  50px;
+    right: 30px;
+    transform: rotate(25deg) skewX(-25deg);
+    border-radius: 50px;
+    width: 60px;
+    height: 8px;
+}
+.feliz .eye.left {
+    top: 90px;
+    left: 50px;
+}
+.feliz .eye.right {
+    top: 90px;
+    right: 50px;
+}
+.feliz .mouth {
+    background-color: white;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    border-radius: 5px 5px 120px 120px;
+    transform: translateX(-50%);
+    overflow: hidden; 
+}
+.raiva .eyebrow.left {
+    top: 70px;
+    left: 30px;
+    transform: rotate(25deg) skewX(15deg);
+    border-radius: 50px;
+    width: 80px;
+    height: 10px;
+
+}
+.raiva .eyebrow.right{
+    top:  70px;
+    right: 30px;
+    transform: rotate(-25deg) skewX(-15deg);
+    border-radius: 50px;
+    width: 80px;
+    height: 10px;
+}
+.raiva .eye.left {
+    top: 90px;
+    left: 50px;
+    width: 35px;
+    height: 35px;
+
+}
+.raiva .eye.right {
+    top: 90px;
+    right: 50px;
+    width: 35px;
+    height: 35px;
+}
+.raiva .mouth {
+    background-color: white;
+    width: 170px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    border-radius: 120px 120px 5px 5px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
